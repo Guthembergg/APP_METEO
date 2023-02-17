@@ -19,7 +19,7 @@ const PlaceForm = () => {
       <Col xs={8}>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3 text-start fw-bold ">
-            <Form.Label className="text-dark fs-6">Where are you?</Form.Label>
+            <Form.Label className="text-light fs-6">Where are you?</Form.Label>
             <Form.Control
               placeholder="Enter your location"
               onKeyDown={handleChange}

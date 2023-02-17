@@ -61,7 +61,7 @@ const Current = () => {
 
   return (
     <Row className="d-flex justify-content-start ps-5 w-100 pt-5 ">
-      <h2 className="text-danger fw-bold fs-1 text-start ">Today</h2>
+      <h2 className="text-white fw-bold fs-1 text-start ">Today</h2>
 
       <div className="d-flex ">
         {localWeather && (
@@ -79,11 +79,11 @@ const Current = () => {
 
               <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
                 <div className="d-flex flex-column align-items-start">
-                  <p>
+                  <p className="text-black fw-bold">
                     <TbWind />
                     {localWeather.wind.speed} km/h
                   </p>
-                  <p>
+                  <p className="text-black fw-bold">
                     <WiHumidity />
                     {localWeather.main.humidity} %
                   </p>

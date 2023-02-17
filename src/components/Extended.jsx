@@ -39,7 +39,7 @@ const Extended = () => {
 
   return (
     <Row className="d-flex justify-content-start mt-5 ps-5 g-3 w-100 ">
-      <h2 className="text-danger text-start ms-2 fs-1 fw-bold">Next days</h2>
+      <h2 className="text-white text-start ms-2 fs-1 fw-bold">Next days</h2>
       {WeatherDaily &&
         WeatherDaily.list
           .filter((el, i) => i % 8 === 0)
@@ -47,7 +47,7 @@ const Extended = () => {
             <Col key={`weather-${i}`} className="myCard mx-3" xs={2}>
               <div className="d-flex flex-column">
                 <div className="d-flex flex-row justify-content-between m-4 fw-bold">
-                  <h6>{element.dt_txt}</h6>
+                  <h6 className="text-white">{element.dt_txt}</h6>
                 </div>
                 <div className="d-flex flex-column justify-content-center">
                   <h1 className="mt-4">
@@ -58,11 +58,11 @@ const Extended = () => {
 
                 <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
                   <div className="d-flex flex-column align-items-start">
-                    <p>
+                    <p className="text-white">
                       <TbWind />
                       {element.wind.speed} km/h
                     </p>
-                    <p>
+                    <p className="text-white">
                       <WiHumidity />
                       {element.main.humidity} %
                     </p>
