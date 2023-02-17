@@ -1,7 +1,11 @@
 .App {
   text-align: center;
-  background-color: #b1f07aaa;
-  color: #fb4d3d;
+  background-color: #00c6f74d;
+  color: #b02215;
+  background-image: url(https://wallpapersmug.com/download/1920x1080/7a22c5/forest_mountains_sunset_cool_weather_minimalism.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
 }
 
 .App-logo {
@@ -41,8 +45,8 @@
 
 .myCard {
   border-radius: 10px;
-  background: #28ffa994;
+  background: #d6e6eb61;
 }
 html {
-  background-color: #b1f07aaa;
+  background-color: #ffffff4d;
 }

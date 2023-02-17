@@ -6,7 +6,7 @@ import Extended from "./components/Extended";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
       <Current />
       <Extended />
     </div>

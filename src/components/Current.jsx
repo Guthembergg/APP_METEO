@@ -60,7 +60,7 @@ const Current = () => {
   }, [place, locationLon, locationLat]);
 
   return (
-    <Row className="d-flex justify-content-start ps-5 w-100 mt-5 ">
+    <Row className="d-flex justify-content-start ps-5 w-100 pt-5 ">
       <h2 className="text-danger fw-bold fs-1 text-start ">Today</h2>
 
       <div className="d-flex ">
