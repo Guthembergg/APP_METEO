@@ -15,11 +15,11 @@ const PlaceForm = () => {
   }
 
   return (
-    <Row className="d-flex justify-content-center mt-5">
+    <Row className="d-flex justify-content-center m-0 p-0  w-100">
       <Col xs={8}>
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Were are you?</Form.Label>
+          <Form.Group className="mb-3 text-start fw-bold ">
+            <Form.Label className="text-dark fs-6">Where are you?</Form.Label>
             <Form.Control
               placeholder="Enter your location"
               onKeyDown={handleChange}

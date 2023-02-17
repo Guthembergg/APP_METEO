@@ -7,7 +7,8 @@ import Extended from "./components/Extended";
 function App() {
   return (
     <div className="App">
-      <PlaceForm />
+      <Current />
+      <Extended />
     </div>
   );
 }

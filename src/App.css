@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #b1f07aaa;
+  color: #fb4d3d;
 }
 
 .App-logo {
@@ -35,4 +37,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.myCard {
+  border-radius: 10px;
+  background: #28ffa994;
+}
+html {
+  background-color: #b1f07aaa;
 }
