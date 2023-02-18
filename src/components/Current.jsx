@@ -6,6 +6,7 @@ import { TbWind } from "react-icons/tb";
 import { WiHumidity } from "react-icons/wi";
 import { SiRainmeter } from "react-icons/si";
 import PlaceForm from "./PlaceForm";
+import Chart from "./Chart";
 const Current = () => {
   const Dispatch = useDispatch();
   const place = useSelector((state) => state.place);
@@ -103,7 +104,11 @@ const Current = () => {
             </div>
           </Col>
         )}
-        <PlaceForm />
+        <Col className="d-flex flex-column ">
+          <PlaceForm />
+
+          <Chart />
+        </Col>
       </div>
     </Row>
   );
