@@ -46,8 +46,8 @@ const Extended = () => {
           .map((element, i) => (
             <Col key={`weather-${i}`} className="myCard mx-3" xs={2}>
               <div className="d-flex flex-column">
-                <div className="d-flex flex-row justify-content-between m-4 fw-bold">
-                  <h6 className="text-white">{element.dt_txt}</h6>
+                <div className="d-flex flex-row justify-content-center m-4 fw-bold">
+                  <h6 className="text-white ">{element.dt_txt.slice(0, 16)}</h6>
                 </div>
                 <div className="d-flex flex-column justify-content-center">
                   <h1 className="mt-4">
