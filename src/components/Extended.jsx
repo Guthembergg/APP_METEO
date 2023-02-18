@@ -39,8 +39,10 @@ const Extended = () => {
 
   return (
     <Row className="d-flex justify-content-start mt-2 ps-5 g-3 w-100 ">
-      <h2 className="text-white text-start ms-2 fs-1 fw-bold">Next days</h2>
-      <Col xs={11} className="d-flex ">
+      <h2 className="text-white text-start w-75 ms-5 ps-5 fs-1 fw-bold">
+        Next days
+      </h2>
+      <Col xs={11} className="d-flex justify-content-center">
         {WeatherDaily &&
           WeatherDaily.list
             .filter((el, i) => i % 8 === 0)

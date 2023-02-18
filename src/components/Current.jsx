@@ -62,13 +62,13 @@ const Current = () => {
 
   return (
     <Row className="d-flex justify-content-start ps-5 w-100 pt-5 ">
-      <div className="d-flex justify-content-between">
-        <Col className="d-flex flex-column">
+      <div className="d-flex justify-content-center">
+        <Col className="d-flex flex-column ms-5" xs={4}>
           <h2 className="text-white fw-bold fs-1 text-start mb-3 mt-3 ">
             Today
           </h2>
           {localWeather && (
-            <Col className="myCard" xs={12}>
+            <Col className="myCard" xs={10}>
               <div className="d-flex flex-column">
                 <div className="d-flex flex-row justify-content-between m-4 fw-bold">
                   <h3>{localWeather.name}</h3> <p>Now</p>
@@ -107,7 +107,7 @@ const Current = () => {
             </Col>
           )}
         </Col>
-        <Col xs={8} className="d-flex flex-column">
+        <Col xs={7} className="d-flex flex-column ms-5">
           <PlaceForm />
           <Chart />
         </Col>
