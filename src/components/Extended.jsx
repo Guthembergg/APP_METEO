@@ -38,50 +38,54 @@ const Extended = () => {
   }, [locationLon, locationLat]);
 
   return (
-    <Row className="d-flex justify-content-start mt-5 ps-5 g-3 w-100 ">
+    <Row className="d-flex justify-content-start mt-2 ps-5 g-3 w-100 ">
       <h2 className="text-white text-start ms-2 fs-1 fw-bold">Next days</h2>
-      {WeatherDaily &&
-        WeatherDaily.list
-          .filter((el, i) => i % 8 === 0)
-          .map((element, i) => (
-            <Col key={`weather-${i}`} className="myCard mx-3" xs={2}>
-              <div className="d-flex flex-column">
-                <div className="d-flex flex-row justify-content-center m-4 fw-bold">
-                  <h6 className="text-white ">{element.dt_txt.slice(0, 16)}</h6>
-                </div>
-                <div className="d-flex flex-column justify-content-center">
-                  <h1 className="mt-4">
-                    {(element.main.temp - 273).toFixed(1)} °C
-                  </h1>
-                  <p>{element.weather[0].main}</p>
-                </div>
+      <Col xs={11} className="d-flex ">
+        {WeatherDaily &&
+          WeatherDaily.list
+            .filter((el, i) => i % 8 === 0)
+            .map((element, i) => (
+              <Col key={`weather-${i}`} className="myCard mx-3" xs={2}>
+                <div className="d-flex flex-column">
+                  <div className="d-flex flex-row justify-content-center m-4 fw-bold">
+                    <h6 className="text-white ">
+                      {element.dt_txt.slice(0, 16)}
+                    </h6>
+                  </div>
+                  <div className="d-flex flex-column justify-content-center">
+                    <h1 className="mt-4">
+                      {(element.main.temp - 273).toFixed(1)} °C
+                    </h1>
+                    <p>{element.weather[0].main}</p>
+                  </div>
 
-                <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
-                  <div className="d-flex flex-column align-items-start">
-                    <p className="text-white">
-                      <TbWind />
-                      {element.wind.speed} km/h
-                    </p>
-                    <p className="text-white">
-                      <WiHumidity />
-                      {element.main.humidity} %
-                    </p>
-                    {/* {element.rain["1h"].length !== 0 && (
+                  <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
+                    <div className="d-flex flex-column align-items-start">
+                      <p className="text-white">
+                        <TbWind />
+                        {element.wind.speed} km/h
+                      </p>
+                      <p className="text-white">
+                        <WiHumidity />
+                        {element.main.humidity} %
+                      </p>
+                      {/* {element.rain["1h"].length !== 0 && (
                   <p>
                     <SiRainmeter />
                     {element.rain["1h"]}h
                   </p>
                 )} */}
-                  </div>
+                    </div>
 
-                  <img
-                    src={`http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`}
-                    alt="icon"
-                  />
+                    <img
+                      src={`http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`}
+                      alt="icon"
+                    />
+                  </div>
                 </div>
-              </div>
-            </Col>
-          ))}
+              </Col>
+            ))}
+      </Col>
     </Row>
   );
 };

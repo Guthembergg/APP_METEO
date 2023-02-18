@@ -62,51 +62,53 @@ const Current = () => {
 
   return (
     <Row className="d-flex justify-content-start ps-5 w-100 pt-5 ">
-      <h2 className="text-white fw-bold fs-1 text-start ">Today</h2>
+      <div className="d-flex justify-content-between">
+        <Col className="d-flex flex-column">
+          <h2 className="text-white fw-bold fs-1 text-start mb-3 mt-3 ">
+            Today
+          </h2>
+          {localWeather && (
+            <Col className="myCard" xs={12}>
+              <div className="d-flex flex-column">
+                <div className="d-flex flex-row justify-content-between m-4 fw-bold">
+                  <h3>{localWeather.name}</h3> <p>Now</p>
+                </div>
+                <div className="d-flex flex-column justify-content-center">
+                  <h1 className="mt-4">
+                    {(localWeather.main.temp - 273).toFixed(1)} °C
+                  </h1>
+                  <p>{localWeather.weather[0].main}</p>
+                </div>
 
-      <div className="d-flex ">
-        {localWeather && (
-          <Col className="myCard" xs={6}>
-            <div className="d-flex flex-column">
-              <div className="d-flex flex-row justify-content-between m-4 fw-bold">
-                <h3>{localWeather.name}</h3> <p>Now</p>
-              </div>
-              <div className="d-flex flex-column justify-content-center">
-                <h1 className="mt-4">
-                  {(localWeather.main.temp - 273).toFixed(1)} °C
-                </h1>
-                <p>{localWeather.weather[0].main}</p>
-              </div>
-
-              <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
-                <div className="d-flex flex-column align-items-start">
-                  <p className="text-black fw-bold">
-                    <TbWind />
-                    {localWeather.wind.speed} km/h
-                  </p>
-                  <p className="text-black fw-bold">
-                    <WiHumidity />
-                    {localWeather.main.humidity} %
-                  </p>
-                  {/* {localWeather.rain["1h"].length !== 0 && (
+                <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
+                  <div className="d-flex flex-column align-items-start">
+                    <p className="text-black fw-bold">
+                      <TbWind />
+                      {localWeather.wind.speed} km/h
+                    </p>
+                    <p className="text-black fw-bold">
+                      <WiHumidity />
+                      {localWeather.main.humidity} %
+                    </p>
+                    {/* {localWeather.rain["1h"].length !== 0 && (
                   <p>
                     <SiRainmeter />
                     {localWeather.rain["1h"]}h
                   </p>
                 )} */}
+                  </div>
+
+                  <img
+                    src={`http://openweathermap.org/img/wn/${localWeather.weather[0].icon}@2x.png`}
+                    alt="icon"
+                  />
                 </div>
-
-                <img
-                  src={`http://openweathermap.org/img/wn/${localWeather.weather[0].icon}@2x.png`}
-                  alt="icon"
-                />
               </div>
-            </div>
-          </Col>
-        )}
-        <Col className="d-flex flex-column ">
+            </Col>
+          )}
+        </Col>
+        <Col xs={8} className="d-flex flex-column">
           <PlaceForm />
-
           <Chart />
         </Col>
       </div>

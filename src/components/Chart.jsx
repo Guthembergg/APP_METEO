@@ -30,9 +30,9 @@ const Chart = () => {
   return (
     <>
       {data && (
-        <ResponsiveContainer width="80%" height="100%">
+        <ResponsiveContainer width="82%" height="100%">
           <AreaChart
-            className="pt-5 ps-5 "
+            className=""
             width={500}
             height={400}
             data={WeatherDaily?.list
@@ -45,10 +45,11 @@ const Chart = () => {
               })}
             margin={{
               top: 10,
-              right: 30,
-              left: 60,
+              right: 0,
+              left: 160,
               bottom: 0,
             }}
+            style={{ position: "relative", height: "185px" }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
@@ -65,9 +66,9 @@ const Chart = () => {
       )}
 
       {data2 && (
-        <ResponsiveContainer width="80%" height="100%">
+        <ResponsiveContainer width="82%" height="100%">
           <AreaChart
-            className="pt-5 ps-5 "
+            className=""
             width={500}
             height={400}
             data={WeatherDaily?.list
@@ -80,10 +81,11 @@ const Chart = () => {
               })}
             margin={{
               top: -20,
-              right: 30,
-              left: 60,
+              right: 0,
+              left: 160,
               bottom: 0,
             }}
+            style={{ position: "relative", height: "195px" }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
