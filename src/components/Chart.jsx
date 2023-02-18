@@ -32,7 +32,7 @@ const Chart = () => {
       {data && (
         <ResponsiveContainer width="80%" height="100%">
           <AreaChart
-            className="pt-5 ps-5"
+            className="pt-5 ps-5 "
             width={500}
             height={400}
             data={WeatherDaily?.list
@@ -67,7 +67,7 @@ const Chart = () => {
       {data2 && (
         <ResponsiveContainer width="80%" height="100%">
           <AreaChart
-            className="pt-5 ps-5"
+            className="pt-5 ps-5 "
             width={500}
             height={400}
             data={WeatherDaily?.list
