@@ -46,7 +46,7 @@ const Chart = () => {
             margin={{
               top: 10,
               right: 30,
-              left: 0,
+              left: 60,
               bottom: 0,
             }}
           >
@@ -62,7 +62,8 @@ const Chart = () => {
             />
           </AreaChart>
         </ResponsiveContainer>
-      )}{" "}
+      )}
+
       {data2 && (
         <ResponsiveContainer width="80%" height="100%">
           <AreaChart
@@ -78,9 +79,9 @@ const Chart = () => {
                 };
               })}
             margin={{
-              top: 10,
+              top: -20,
               right: 30,
-              left: 0,
+              left: 60,
               bottom: 0,
             }}
           >
