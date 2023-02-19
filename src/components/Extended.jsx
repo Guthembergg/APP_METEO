@@ -1,13 +1,17 @@
 import { Row, Col, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 import { TbWind } from "react-icons/tb";
 import { WiHumidity } from "react-icons/wi";
 import { SiRainmeter } from "react-icons/si";
+import Error from "./Error";
+import Loading from "./Loading";
 
 const Extended = () => {
   const Dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   const locationLat = useSelector((state) => state.lat);
   const locationLon = useSelector((state) => state.lon);
@@ -25,16 +29,23 @@ const Extended = () => {
         const weather = await response.json();
         console.log(weather);
         Dispatch({ type: "WEATHERDAILY", payload: weather });
+        setIsLoading(false);
+        setIsError(false);
       } else {
         alert("Error fetching results weatherDaily");
+        setIsLoading(false);
+        setIsError(true);
       }
     } catch (error) {
       console.log(error);
+      setIsLoading(false);
+      setIsError(true);
     }
   };
 
   useEffect(() => {
     getWeatherDaily();
+    setIsLoading(true);
   }, [locationLon, locationLat]);
 
   return (
@@ -42,8 +53,14 @@ const Extended = () => {
       <h2 className="text-white text-start w-75 ms-5 ps-5 fs-1 fw-bold">
         Next days
       </h2>
+
       <Col xs={11} className="d-flex justify-content-center">
+        {isError && !isLoading && <Error />}
+        {!isError && isLoading && <Loading />}
+
         {WeatherDaily &&
+          !isError &&
+          !isLoading &&
           WeatherDaily.list
             .filter((el, i) => i % 8 === 0)
             .map((element, i) => (

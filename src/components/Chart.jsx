@@ -44,7 +44,7 @@ const Chart = () => {
                 };
               })}
             margin={{
-              top: 10,
+              top: 30,
               right: 0,
               left: 160,
               bottom: 0,
@@ -80,7 +80,7 @@ const Chart = () => {
                 };
               })}
             margin={{
-              top: -20,
+              top: 10,
               right: 0,
               left: 160,
               bottom: 0,
