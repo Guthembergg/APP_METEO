@@ -31,6 +31,7 @@ const Current = () => {
       const response = await fetch(baseEndpointLocation + place);
       if (response.ok) {
         const location = await response.json();
+        console.log(location);
         console.log(location[0].lat);
         console.log(location[0].lon);
 
@@ -100,16 +101,16 @@ const Current = () => {
 
                   <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
                     <div className="d-flex flex-column align-items-start">
-                      <p className="text-black fw-bold">
+                      <p className="text-primary fw-bold">
                         <TbWind />
                         {localWeather.wind.speed} km/h
                       </p>
-                      <p className="text-black fw-bold">
+                      <p className="text-primary fw-bold">
                         <WiHumidity />
                         {localWeather.main.humidity} %
                       </p>
                       {localWeather.rain && (
-                        <p className="text-black fw-bold">
+                        <p className="text-primary fw-bold">
                           <SiRainmeter />
                           {localWeather.rain["1h"]}h
                         </p>
