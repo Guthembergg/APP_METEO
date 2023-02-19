@@ -29,6 +29,7 @@ const Chart = () => {
   console.log(data);
   return (
     <>
+      <h6 className="text-white">temperature</h6>
       {data && (
         <ResponsiveContainer width="82%" height="100%">
           <AreaChart
@@ -44,7 +45,7 @@ const Chart = () => {
                 };
               })}
             margin={{
-              top: 30,
+              top: 0,
               right: 0,
               left: 160,
               bottom: 0,
@@ -64,41 +65,43 @@ const Chart = () => {
           </AreaChart>
         </ResponsiveContainer>
       )}
-
       {data2 && (
-        <ResponsiveContainer width="82%" height="100%">
-          <AreaChart
-            className=""
-            width={500}
-            height={400}
-            data={WeatherDaily?.list
-              .filter((el, i) => i % 8 === 0)
-              .map((el) => {
-                return {
-                  name: el.dt_txt.slice(5, 10),
-                  "wind km/h": el.wind.speed,
-                };
-              })}
-            margin={{
-              top: 10,
-              right: 0,
-              left: 160,
-              bottom: 0,
-            }}
-            style={{ position: "relative", height: "195px" }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Area
-              type="monotone"
-              dataKey="wind km/h"
-              stroke="#0066ff"
-              fill="#f8f9fa"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <>
+          <h6 className="text-primary">wind speed</h6>
+          <ResponsiveContainer width="82%" height="100%">
+            <AreaChart
+              className=""
+              width={500}
+              height={400}
+              data={WeatherDaily?.list
+                .filter((el, i) => i % 8 === 0)
+                .map((el) => {
+                  return {
+                    name: el.dt_txt.slice(5, 10),
+                    "wind km/h": el.wind.speed,
+                  };
+                })}
+              margin={{
+                top: 10,
+                right: 0,
+                left: 160,
+                bottom: 0,
+              }}
+              style={{ position: "relative", height: "195px" }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="wind km/h"
+                stroke="#0066ff"
+                fill="#f8f9fa"
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </>
       )}
     </>
   );
