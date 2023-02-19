@@ -40,7 +40,7 @@ const Chart = () => {
               .map((el) => {
                 return {
                   name: el.dt_txt.slice(5, 10),
-                  "°C": el.main.temp - 273,
+                  "°C": (el.main.temp - 273).toFixed(2),
                 };
               })}
             margin={{
@@ -49,7 +49,7 @@ const Chart = () => {
               left: 160,
               bottom: 0,
             }}
-            style={{ position: "relative", height: "185px" }}
+            style={{ position: "relative", height: "195px" }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
