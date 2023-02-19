@@ -22,7 +22,7 @@ const Current = () => {
   const [isError, setIsError] = useState(false);
 
   const baseEndpointWeather =
-    "https://api.openweathermap.org/data/2.5/weather?appid=ef612c468ca58e4314f5315e17a41bac";
+    "https://api.openweathermap.org/data/2.5/weather?appid=ef612c468ca58e4314f5315e17a41bac&units=metric";
   const baseEndpointLocation =
     "http://api.openweathermap.org/geo/1.0/direct?limit=1&appid=ef612c468ca58e4314f5315e17a41bac&q=";
 
@@ -92,7 +92,7 @@ const Current = () => {
                   </div>
                   <div className="d-flex flex-column justify-content-center">
                     <h1 className="mt-4 fw-bold">
-                      {(localWeather.main.temp - 273).toFixed(1)} °C
+                      {localWeather.main.temp.toFixed(1)} °C
                     </h1>
                     <p className="fs-4 text-primary">
                       {localWeather.weather[0].description}

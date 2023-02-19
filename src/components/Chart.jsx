@@ -41,11 +41,11 @@ const Chart = () => {
               .map((el) => {
                 return {
                   name: el.dt_txt.slice(5, 10),
-                  "°C": (el.main.temp - 273).toFixed(2),
+                  "°C": el.main.temp.toFixed(2),
                 };
               })}
             margin={{
-              top: 0,
+              top: 10,
               right: 0,
               left: 160,
               bottom: 0,

@@ -18,7 +18,7 @@ const Extended = () => {
   const WeatherDaily = useSelector((state) => state.weatherDaily);
 
   const baseEndpointWeatherDaily =
-    "http://api.openweathermap.org/data/2.5/forecast?appid=ef612c468ca58e4314f5315e17a41bac&";
+    "http://api.openweathermap.org/data/2.5/forecast?appid=ef612c468ca58e4314f5315e17a41bac&units=metric&";
 
   const getWeatherDaily = async () => {
     try {
@@ -73,7 +73,7 @@ const Extended = () => {
                   </div>
                   <div className="d-flex flex-column justify-content-center">
                     <h1 className="mt-4 textCardExtended">
-                      {(element.main.temp - 273).toFixed(1)} °C
+                      {element.main.temp.toFixed(1)} °C
                     </h1>
                     <p className="textCardExtended text-primary">
                       {element.weather[0].description}
