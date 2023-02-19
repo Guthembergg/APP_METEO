@@ -7,7 +7,7 @@ import Chart from "./components/Chart";
 
 function App() {
   return (
-    <div className="App ">
+    <div className="App d-flex flex-column justify-content-center">
       <Current />
       <Extended />
     </div>

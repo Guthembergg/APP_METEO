@@ -101,16 +101,16 @@ const Current = () => {
 
                   <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
                     <div className="d-flex flex-column align-items-start">
-                      <p className="text-primary fw-bold">
+                      <p className="text-white fw-bold">
                         <TbWind />
                         {localWeather.wind.speed} km/h
                       </p>
-                      <p className="text-primary fw-bold">
+                      <p className="text-white fw-bold">
                         <WiHumidity />
                         {localWeather.main.humidity} %
                       </p>
                       {localWeather.rain && (
-                        <p className="text-primary fw-bold">
+                        <p className="text-white fw-bold">
                           <SiRainmeter />
                           {localWeather.rain["1h"]}h
                         </p>
