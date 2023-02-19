@@ -3,7 +3,7 @@
 .App {
   text-align: center;
   background-color: #00c6f74d;
-  color: #b02215;
+  color: rgb(49, 49, 163);
   background-image: url(https://wallpapersmug.com/download/1920x1080/7a22c5/forest_mountains_sunset_cool_weather_minimalism.jpg);
   background-size: cover;
   height: 100vh;
@@ -53,4 +53,7 @@
 }
 html {
   background-color: #ffffff4d;
+}
+.textCardExtended {
+  color: rgb(32, 32, 164);
 }

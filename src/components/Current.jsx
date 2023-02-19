@@ -93,7 +93,7 @@ const Current = () => {
                     <h1 className="mt-4 fw-bold">
                       {(localWeather.main.temp - 273).toFixed(1)} °C
                     </h1>
-                    <p className="fs-4">
+                    <p className="fs-4 text-primary">
                       {localWeather.weather[0].description}
                     </p>
                   </div>

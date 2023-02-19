@@ -58,8 +58,8 @@ const Chart = () => {
             <Area
               type="monotone"
               dataKey="°C"
-              stroke="#b02215"
-              fill="#b02215"
+              stroke="#040141"
+              fill="#0b00ff"
             />
           </AreaChart>
         </ResponsiveContainer>
@@ -94,8 +94,8 @@ const Chart = () => {
             <Area
               type="monotone"
               dataKey="wind km/h"
-              stroke="#b02215"
-              fill="#b02215"
+              stroke="#0066ff"
+              fill="#f8f9fa"
             />
           </AreaChart>
         </ResponsiveContainer>
