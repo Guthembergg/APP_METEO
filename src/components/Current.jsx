@@ -51,6 +51,7 @@ const Current = () => {
       );
       if (response.ok) {
         const weather = await response.json();
+        console.log(weather);
         Dispatch({ type: "WEATHER", payload: weather });
         setIsLoading(false);
         setIsError(false);
@@ -89,10 +90,12 @@ const Current = () => {
                     <h3>{localWeather.name}</h3> <p>Now</p>
                   </div>
                   <div className="d-flex flex-column justify-content-center">
-                    <h1 className="mt-4">
+                    <h1 className="mt-4 fw-bold">
                       {(localWeather.main.temp - 273).toFixed(1)} °C
                     </h1>
-                    <p>{localWeather.weather[0].main}</p>
+                    <p className="fs-4">
+                      {localWeather.weather[0].description}
+                    </p>
                   </div>
 
                   <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
@@ -106,7 +109,7 @@ const Current = () => {
                         {localWeather.main.humidity} %
                       </p>
                       {localWeather.rain && (
-                        <p>
+                        <p className="text-black fw-bold">
                           <SiRainmeter />
                           {localWeather.rain["1h"]}h
                         </p>

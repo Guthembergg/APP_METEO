@@ -75,7 +75,7 @@ const Extended = () => {
                     <h1 className="mt-4">
                       {(element.main.temp - 273).toFixed(1)} °C
                     </h1>
-                    <p>{element.weather[0].main}</p>
+                    <p>{element.weather[0].description}</p>
                   </div>
 
                   <div className="d-flex flex-row justify-content-between align-items-center m-4 me-0 mb-0">
