@@ -105,12 +105,12 @@ const Current = () => {
                         <WiHumidity />
                         {localWeather.main.humidity} %
                       </p>
-                      {/* {localWeather.rain["1h"].length !== 0 && (
-                  <p>
-                    <SiRainmeter />
-                    {localWeather.rain["1h"]}h
-                  </p>
-                )} */}
+                      {localWeather.rain && (
+                        <p>
+                          <SiRainmeter />
+                          {localWeather.rain["1h"]}h
+                        </p>
+                      )}
                     </div>
 
                     <img
