@@ -24,7 +24,7 @@ const Current = () => {
   const baseEndpointWeather =
     "https://api.openweathermap.org/data/2.5/weather?appid=ef612c468ca58e4314f5315e17a41bac&units=metric";
   const baseEndpointLocation =
-    "http://api.openweathermap.org/geo/1.0/direct?limit=1&appid=ef612c468ca58e4314f5315e17a41bac&q=";
+    "https://api.openweathermap.org/geo/1.0/direct?limit=1&appid=ef612c468ca58e4314f5315e17a41bac&q=";
 
   const getCurrentLocation = async () => {
     try {
