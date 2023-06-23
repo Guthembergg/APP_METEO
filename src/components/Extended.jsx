@@ -18,7 +18,7 @@ const Extended = () => {
   const WeatherDaily = useSelector((state) => state.weatherDaily);
 
   const baseEndpointWeatherDaily =
-    "http://api.openweathermap.org/data/2.5/forecast?appid=ef612c468ca58e4314f5315e17a41bac&units=metric&";
+    "https://api.openweathermap.org/data/2.5/forecast?appid=ef612c468ca58e4314f5315e17a41bac&units=metric&";
 
   const getWeatherDaily = async () => {
     try {
