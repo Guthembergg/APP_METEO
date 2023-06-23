@@ -12,7 +12,9 @@
   padding-bottom: 30px;
   font-family: "Fjalla One", sans-serif !important;
 }
-
+html {
+  min-width: 1200px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
