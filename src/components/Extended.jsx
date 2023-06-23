@@ -99,7 +99,7 @@ const Extended = () => {
                     </div>
 
                     <img
-                      src={`http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`}
+                      src={`https://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`}
                       alt="icon"
                     />
                   </div>
